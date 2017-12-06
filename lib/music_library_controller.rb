@@ -65,6 +65,8 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     artist_name = gets.strip
+    songs_by = []
+    songs_by = Songs.all.collect {|a| a.artist == artist_name}
 
   end
 
