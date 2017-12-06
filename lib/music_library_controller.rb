@@ -67,18 +67,11 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     artist_name = gets.strip
 
-    binding.pry
+    hash = {}
 
-    if artist = Artist.find_by_name(artist_name)
-      artist.songs.sort{ |a, b| a.name <=> b.name }.each.with_index(1) do |s, i|
-        puts "#{i}. #{s.name} - #{s.genre.name}"
-      end
-    end
-
-    artist_name
-
-    #.sort {|a,b| a <=> b}
-    testhash.each do |s|
+    hash = Artist.find_by_name(artist_name)
+    hash.songs.srt{|a,b| a.name <=> b.name }
+    hash.each do |s|
       counter+=1
       puts "#{counter}. #{s.name} - #{s.genre.name}"
     end
