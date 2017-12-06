@@ -28,6 +28,19 @@ class MusicLibraryController
       puts "To quit, type 'exit'."
       puts "What would you like to do?"
       music_choice = gets.strip.downcase
+      case music_choice
+      when "list songs"
+        list_songs
+      when "list artists"
+        list_artists
+      when "list genres"
+        list_genres
+      when "list artist"
+        list_artist
+      when "list genre"
+        list_genre
+      end
+
     end
   end
 
