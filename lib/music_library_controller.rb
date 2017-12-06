@@ -35,7 +35,7 @@ class MusicLibraryController
 
     counter = 0
     testhash = {}
-    testhash = Song.all.sort {|a| a.name }
+    testhash = Song.all.sort 
     testhash.each do |s|
       counter+=1
       puts "#{i}. #{s.artist.name} - #{s.name} - #{s.genre.name}"
