@@ -42,8 +42,7 @@ class MusicLibraryController
     end
 =end
 
-    test = []
-    Song.all.each {|song| test<<song}
+    
     #binding.pry
 =begin
     counter = 0
