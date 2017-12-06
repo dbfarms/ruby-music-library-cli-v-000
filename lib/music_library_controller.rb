@@ -70,12 +70,16 @@ class MusicLibraryController
     counter = 0
     if artist_to_be_named = Artist.find_by_name(artist_name)
       artist_to_be_named.songs.sort{|a,b| a.name <=> b.name }.each.with_index(1) do |s, c|
-        counter+=1
+        #counter+=1
         puts "#{c}. #{s.name} - #{s.genre.name}"
       end
     end
-
   end
+
+  def list_songs_by_genre 
+
+  end 
+
 end
 
 =begin
