@@ -68,7 +68,7 @@ class MusicLibraryController
     artist_name = gets.strip
 
 
-    if hash = Artist.find_by_name(artist_name)
+    if artist_to_be_named = Artist.find_by_name(artist_name)
     hash.songs.sort{|a,b| a.name <=> b.name }
     hash.each do |s|
       counter+=1
