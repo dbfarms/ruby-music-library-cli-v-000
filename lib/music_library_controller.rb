@@ -91,15 +91,13 @@ class MusicLibraryController
     song_number = gets.strip
 
     if (song_number > 0 && song_number <= Song.all.length)
-      song_number -= 1 
+      song_number -= 1
       song = Song.all.sort{ |a, b| a.name <=> b.name }
     end
 
     puts "Playing #{song.name} by #{song.artist.name}" if song
   end
-      
 
-  end
 
 end
 
