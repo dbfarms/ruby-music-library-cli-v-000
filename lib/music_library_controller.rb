@@ -52,4 +52,14 @@ class MusicLibraryController
     end
   end
 
+  def list_genres
+    counter = 0
+    testhash = {}
+    testhash = Genre.all.sort {|a,b| a.name <=> b.name}
+    testhash.each do |s|
+      counter+=1
+      puts "#{counter}. #{s.name}" #{} - #{s.name} - #{s.genre.name}"
+    end
+  end
+
 end
