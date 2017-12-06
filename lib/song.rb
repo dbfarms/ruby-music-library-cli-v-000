@@ -54,10 +54,10 @@ class Song
 
   def self.new_from_filename(path_name)
     splitter = []
-    splitter = path_name.split(/ - /).gsub(".mp3", "")
+    splitter = path_name.split(/ - /)
     artist_name = splitter[0].strip # if !@@all.detect {|song| song.artist == artist}
     name = splitter[1].strip
-    genre_name = splitter[2].strip
+    genre_name = splitter[2].strip.gsub(".mp3", "")
     artist = Artist.find_or_create_by_name(artist_name)
     genre = Genre.find_or_create_by_name(genre_name)
     song = Song.new(name, artist, genre)
