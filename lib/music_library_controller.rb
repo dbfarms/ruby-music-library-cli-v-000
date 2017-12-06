@@ -61,6 +61,5 @@ class MusicLibraryController
       puts "#{counter}. #{song}"
     end
 =end
-  end
 
 end
