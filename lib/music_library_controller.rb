@@ -71,7 +71,7 @@ class MusicLibraryController
     if artist_to_be_named = Artist.find_by_name(artist_name)
     artist_to_be_named.songs.sort{|a,b| a.name <=> b.name }
     binding.pry
-    artist_to_be_named.each do |s|
+    artist_to_be_named.songs.each do |s|
       counter+=1
       puts "#{counter}. #{s.name} - #{s.genre.name}"
     end
