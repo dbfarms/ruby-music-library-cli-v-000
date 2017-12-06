@@ -88,7 +88,8 @@ class MusicLibraryController
 
   def play_song
     puts "Which song number would you like to play?"
-    song_number = gets.strip
+    song_number = gets.strip.to_i
+
 
     if (song_number > 0 && song_number <= Song.all.length)
       song_number -= 1
