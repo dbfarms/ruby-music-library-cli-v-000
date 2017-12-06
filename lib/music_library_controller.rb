@@ -69,6 +69,7 @@ class MusicLibraryController
     songs_by = Songs.all.collect {|a| a.artist == artist_name}
     songs_by.each_with_index do |a,b|
       puts "#{a}. #{b.name} - #{b.genre}"
+    end
 
   end
 
