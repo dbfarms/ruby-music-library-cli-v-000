@@ -69,12 +69,18 @@ class MusicLibraryController
 
 
     if artist_to_be_named = Artist.find_by_name(artist_name)
-    hash.songs.sort{|a,b| a.name <=> b.name }
-    hash.each do |s|
+    artist_to_be_named.songs.sort{|a,b| a.name <=> b.name }
+    artist_to_be_named.each do |s|
       counter+=1
       puts "#{counter}. #{s.name} - #{s.genre.name}"
     end
     end
 
+  end
+end
+
+if artist = Artist.find_by_name(artist_name)
+  artist.songs.sort{ |a, b| a.name <=> b.name }.each.with_index(1) do |s, i|
+    puts "#{i}. #{s.name} - #{s.genre.name}"
   end
 end
