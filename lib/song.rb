@@ -54,7 +54,7 @@ class Song
 
   def self.new_from_filename(path_name)
     splitter = []
-    splitter = path_name.split(/\.|[-]/)
+    splitter = path_name.split(/ - /)
     artist_name = splitter[0].strip # if !@@all.detect {|song| song.artist == artist}
     name = splitter[1].strip
     genre_name = splitter[2].strip
