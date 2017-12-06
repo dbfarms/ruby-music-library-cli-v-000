@@ -63,6 +63,8 @@ class MusicLibraryController
   end
 
   def list_songs_by_artist
+
+=begin
     puts "Please enter the name of an artist:"
     artist_name = gets.strip
     binding.pry
@@ -72,7 +74,7 @@ class MusicLibraryController
       counter+=1
       puts "#{counter}. #{s.name} - #{s.genre.name}"
     end
-
+=end
   end
 
 end
