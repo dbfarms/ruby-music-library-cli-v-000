@@ -67,6 +67,7 @@ class MusicLibraryController
     artist_name = gets.strip
     songs_by = []
     songs_by = Song.all.detect {|a| a.artist == artist_name}
+    binding.pry
     songs_by.each_with_index do |a,b|
       binding.pry
       puts "#{a}. #{b.name} - #{b.genre}"
