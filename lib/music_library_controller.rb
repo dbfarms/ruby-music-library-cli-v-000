@@ -70,7 +70,7 @@ class MusicLibraryController
     hash = {}
 
     hash = Artist.find_by_name(artist_name)
-    hash.songs.srt{|a,b| a.name <=> b.name }
+    hash.songs.sort{|a,b| a.name <=> b.name }
     hash.each do |s|
       counter+=1
       puts "#{counter}. #{s.name} - #{s.genre.name}"
